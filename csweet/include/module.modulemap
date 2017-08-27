@@ -1,0 +1,4 @@
+module csweet [system] {
+  header "csweet.h"
+  export *
+}
