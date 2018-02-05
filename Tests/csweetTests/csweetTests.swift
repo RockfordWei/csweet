@@ -17,9 +17,17 @@ public class CPluser {
 class csweetTests: XCTestCase {
     func testExample() {
       let pluser = CPluser(1)
-      let three = pluser.add(2)
-      print(three, 3)
-      XCTAssertEqual(three, 3)
+      let result = pluser.add(2)
+      switch result {
+      case 3:
+        print("C++98/03")
+        break
+      case 14:
+        print("C++11")
+        break
+      default:
+        XCTFail("unexpected: \(result)")
+      }
     }
 
 

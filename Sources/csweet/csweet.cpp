@@ -25,8 +25,13 @@ void * CPluser_new(int seed)
 
 int CPluser_add(void * cpluser, int with)
 {
+#if __cplusplus > 199711L
+  auto ref = (CPluser::CPluser *) cpluser;
+  return ref->add(with) + 11;
+#else
   CPluser::CPluser * ref = (CPluser::CPluser *) cpluser;
   return ref->add(with);
+#endif
 }
 
 void CPluser_del(void * cpluser) {
