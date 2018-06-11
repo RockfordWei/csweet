@@ -1,5 +1,5 @@
 module csweet [system] {
-  //requires cplusplus11
+  requires !cplusplus11
   header "csweet.h"
   export *
 }
